@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Форма обратной связи</title>
+    <link rel="stylesheet" media="screen" href="css/styles.css" >
+    <link rel="stylesheet" media="screen" href="css/normalize.css">
+</head>
+<body>
+<form class="contact_form" action="php/send.php" method="POST">
+    <input type="hidden" name="adminEmail" value="ayazfaritovich@rambler.ru">
+    <input type="hidden" name="projectName" value="Сайт - портфолио">
+    <input type="hidden" name="emailSubject" value="Сообщение с сайта">
+    <input type="hidden" name="emailFrom" value="Alpharushin">
+    <ul>
+        <li>
+             <h2>Для связи с нами заполните форму:</h2>
+             <span class="required_notification">* Поля, обязательные для заполнения</span>
+        </li>
+        <li>
+            <label for="name">Имя , Отчество(по желанию):</label>
+            <input type="text" name="name"   required />
+        </li>
+        <li>
+            <label for="email">Email:</label>
+            <input type="email" name="email"  required />
+            <span class="form_hint">Например "kamil.jernov@gmail.com"</span>
+        </li>
+        <li>
+            <label for="skype">Ваш Skype:</label>
+            <input type="text" name="skype"  required />
+            <span class="form_hint">Например "lacrasik1999"</span>
+        </li>
+        <li>
+            <label for="website">Вэб-сайт:</label>
+            <input type="url" name="website"  />
+            <span class="form_hint">Например "https://mysite.net"</span>
+        </li>
+        <li>
+            <label for="message">Ваше сообщение:</label>
+            <textarea name="message" cols="40" rows="6" required ></textarea>
+        </li>
+        <li>
+        	<button class="submit" type="submit">Отправить форму</button>
+        </li>
+    </ul>
+</form>
+</body>
+</html>
